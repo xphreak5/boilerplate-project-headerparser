@@ -7,7 +7,7 @@ const fetchData = async(req, res) => {
   const browserInfo = req.headers;
   const myIp = await (await axios.get('https://api.ipify.org/?format=json')).data.ip
   res.json({
-    ip: myIp,
+    ipaddress: myIp,
     language: browserInfo["accept-language"],
     software: browserInfo["user-agent"]
   })
